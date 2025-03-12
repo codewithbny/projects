@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #2b1055, #7597de);
+    overflow: hidden;
+}
+
+/* Fullscreen Background Animation */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Glowing Title */
+.glow-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main Login Box */
+.login-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box {
+    width: 350px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    text-align: center;
+    position: relative;
+}
+
+h2 {
+    color: #0ff;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #0ff;
+    outline: none;
+    color: #0ff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-box label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0ff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-bottom: 2px solid #ff0099;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: 0;
+    font-size: 12px;
+    color: #ff0099;
+}
+
+/* Glowing Button */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #0ff;
+    color: #000;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.btn:hover {
+    background: #ff0099;
+    box-shadow: 0 0 20px #ff0099, 0 0 40px #ff0099;
+}
